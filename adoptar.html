@@ -50,7 +50,7 @@
 				<img src="./img/Index/1-1.jpg" alt="">
 				<p class="alias">Vera</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Vera">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-vera">Mas info</a>
 					</div>
@@ -60,7 +60,7 @@
 				<img src="./img/Index/2-1.jpg" alt="">
 				<p class="alias">Dilan</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Dilan">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-dilan">Mas info</a>
 					</div>
@@ -70,7 +70,7 @@
 				<img src="./img/Index/5-1.jpg" alt="">
 				<p class="alias">Cleo</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Cleo">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-cleo">Mas info</a>
 					</div>
@@ -80,7 +80,7 @@
 				<img src="./img/Index/3-1.jpg" alt="">
 				<p class="alias">Mika y Milo</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Mika y Milo">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-mym">Mas info</a>
 					</div>
@@ -90,7 +90,7 @@
 				<img src="./img/Index/ellio.jpg" alt="">
 				<p class="alias">Ellio</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Ellio">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-silver">Mas info </a>
 					</div>
@@ -100,7 +100,7 @@
 				<img src="./img/Index/camila.jpg" alt="">
 				<p class="alias">Camila</p>
 				<div class="botones">
-					<a href="ingresar.html" class="boton primario">Adoptar <i class="uil uil-heart-sign"></i></a>
+					<a href="#" class="boton primario btn-adoptar" data-animal="Camila">Adoptar <i class="uil uil-heart-sign"></i></a>
 					<div class="boton secundario">
 						<a href="" class="btn-cami">Mas info</a>
 					</div>
@@ -181,10 +181,47 @@
 			<a href="#" class="modal__close_k">Volver</a>
 		</div>
 	</section>
-	<script src="./js/main.js"></script>
-	<script src="./js/modal.js"></script>
-</body>
 
+	<!--Formulario de adopción-->
+<section class="modal-adopcion" id="modalAdopcion">
+	<div class="modal__container">
+	  <h2 class="modal__title">Formulario de adopción</h2>
+	  <form class="formulario" id="adopcionForm" autocomplete="off" novalidate>
+		<div class="campo">
+		  <label for="nombreAnimal">Nombre del animal</label>
+		  <input class="input-text" type="text" id="nombreAnimal" name="nombreAnimal" readonly>
+		</div>
+		<div class="campo">
+		  <label for="nombreAdoptante">Tu nombre *</label>
+		  <input class="input-text" type="text" id="nombreAdoptante" name="nombreAdoptante" required>
+		</div>
+		<div class="campo">
+		  <label for="tipoMascota">Tipo de mascota *</label>
+		  <select class="input-text" id="tipoMascota" name="tipoMascota" required>
+			<option value="">Seleccione una opción</option>
+			<option value="Perro">Perro</option>
+			<option value="Gato">Gato</option>
+			<option value="Otro">Otro</option>
+		  </select>
+		</div>
+		<div class="campo">
+		  <label for="motivoAdopcion">Motivo de adopción *</label>
+		  <textarea class="input-text" id="motivoAdopcion" name="motivoAdopcion" required></textarea>
+		</div>
+		<div class="campo">
+		  <label for="contacto">Correo electrónico o teléfono *</label>
+		  <input class="input-text" type="text" id="contacto" name="contacto" required>
+		</div>
+		<div class="campo" style="display: flex; gap: 1rem;">
+		  <button type="submit" class="boton-envio">Enviar solicitud</button>
+		  <button type="button" class="boton-envio" id="cerrarModalAdopcion" style="background:#e74c3c;">Cancelar</button>
+		</div>
+	  </form>
+	</div>
+  </section>
+	<script src="./js/main.js"></script>
+	<script src="./js/modal.js"></script>	
+</body>
 <footer class="pie-pagina">
 	<hr>
 	<div class="grupo1">

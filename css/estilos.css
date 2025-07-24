@@ -88,6 +88,8 @@ span {
   top: 0;
   left: 0;
   position: fixed;
+  z-index: 2000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .nav {
@@ -160,7 +162,7 @@ span {
 
 @media (max-width: 600px) {
   body {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 
   .header {
@@ -220,6 +222,10 @@ span {
   .contentinicio{
    text-align: center;
    margin-block-start: auto;
+  }
+  .modal__container {
+    padding: 1em 0.5em;
+    max-width: 95vw;
   }
 }
 
@@ -502,6 +508,15 @@ span {
 }
 
 /*pie */
+body, html {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.pie-pagina {
+  margin-top: auto;
+}
+
 .pie-pagina {
   width: 100%;
   background-color: rgb(210, 138, 252);
@@ -653,10 +668,15 @@ span {
     align-content: center;
   }
 }
+.boton {
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+}
 
-
-
-
+.boton.primario:hover {
+  background: #e625d6;
+  color: #fff;
+}
 
 .boton-envio {
   background-color: #4ae3f1;
@@ -1173,4 +1193,75 @@ section {
 
 .fotoJson {
   border-radius: 3%;
+}
+.modal-adopcion {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  padding-top: 5vh;
+}
+
+.modal-adopcion.modal--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-adopcion .modal__container {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* MODALES DE INFO DE ANIMALES */
+.modalv, .modal_d, .modalcleo, .modalmym, .modals, .modalk {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+  padding-top: 5vh;
+}
+
+.modalv.modal--show, .modal_d.modal--show, .modalcleo.modal--show, .modalmym.modal--show, .modals.modal--show, .modalk.modal--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalv .modal__container,
+.modal_d .modal__container,
+.modalcleo .modal__container,
+.modalmym .modal__container,
+.modals .modal__container,
+.modalk .modal__container {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
