@@ -104,7 +104,11 @@ carrito = []
 
 @app.route('/')
 def home():
-    return "Proyecto de mascotas"
+    return send_from_directory('..', 'index.html')
+
+@app.route('/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('..', filename)
 
 @app.route('/productos')
 def get_productos():
