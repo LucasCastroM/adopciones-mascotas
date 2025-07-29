@@ -1,30 +1,103 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
+from flask_cors import CORS
+import os
 
 app = Flask(__name__)
+CORS(app)
+
+# Configurar para servir archivos estáticos
+@app.route('/img/<path:filename>')
+def serve_image(filename):
+    return send_from_directory('../img', filename)
+
 productos = [
-     {
+    {
         "id": 1,
-        "nombre": "Collar",
+        "nombre": "Collar para perro",
         "precio": 100,
-        "descripcion": "Collar de cuero",
-        "imagen": "img/collar1.png",
+        "descripcion": "Collar de cuero con enganche",
+        "imagen": "img/collar1.jpg",
         "stock": 10
     },
     {
         "id": 2,
-        "nombre": "Hueso",
+        "nombre": "Collar GPS",
         "precio": 200,
-        "descripcion": "Hueso de goma",
-        "imagen": "img/hueso1.png",
-        "stock": 10
+        "descripcion": "Collar GPS con batería de litio",
+        "imagen": "img/collar3.png",
+        "stock": 5
     },
     {
         "id": 3,
-        "nombre": "Juguete dispensador de comida",
+        "nombre": "Juguete dispensador",
         "precio": 300,
         "descripcion": "Juguete dispensador de comida",
-        "imagen": "img/juguete1.png",
-        "stock": 0
+        "imagen": "img/juguete1.jpg",
+        "stock": 8
+    },
+    {
+        "id": 4,
+        "nombre": "Juguete interactivo",
+        "precio": 150,
+        "descripcion": "Juguete para estimular la mente",
+        "imagen": "img/juguete.jpg",
+        "stock": 12
+    },
+    {
+        "id": 5,
+        "nombre": "Comida premium",
+        "precio": 180,
+        "descripcion": "Comida de alta calidad para mascotas",
+        "imagen": "img/comida1.jpg",
+        "stock": 20
+    },
+    {
+        "id": 6,
+        "nombre": "Comida especial",
+        "precio": 220,
+        "descripcion": "Comida especial para gatos",
+        "imagen": "img/comida2.jpg",
+        "stock": 15
+    },
+    {
+        "id": 7,
+        "nombre": "Comida para gatos",
+        "precio": 160,
+        "descripcion": "Comida balanceada para felinos",
+        "imagen": "img/comida3.jpg",
+        "stock": 18
+    },
+    {
+        "id": 8,
+        "nombre": "Comida premium plus",
+        "precio": 280,
+        "descripcion": "Comida premium con vitaminas",
+        "imagen": "img/comida4.jpg",
+        "stock": 10
+    },
+    {
+        "id": 9,
+        "nombre": "Suéter con capucha",
+        "precio": 250,
+        "descripcion": "Suéter con capucha para mascotas",
+        "imagen": "img/ropa1.jpeg",
+        "stock": 8
+    },
+    {
+        "id": 10,
+        "nombre": "Ropa deportiva",
+        "precio": 180,
+        "descripcion": "Ropa cómoda para actividades",
+        "imagen": "img/ropa2.jpg",
+        "stock": 6
+    },
+    {
+        "id": 11,
+        "nombre": "Ropa elegante",
+        "precio": 320,
+        "descripcion": "Ropa elegante para ocasiones especiales",
+        "imagen": "img/ropa3.jpg",
+        "stock": 4
     }
 ]
 carrito = []
