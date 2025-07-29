@@ -14,7 +14,9 @@
 	<link rel="icon" type="image/jpg" href="./img/favicon.png" />
 	<!--CSS-->
 	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/adopciones.css">
 	<script defer src="./js/index.js"></script>
+	<script src="./js/imagen-modal.js"></script>
 	<script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 </head>
 
@@ -36,16 +38,27 @@
 					<a href="producto.html" class="nav-menu-link nav-link">Productos</a>
 				</li>
 				<li class="nav-menu-item">
+					<a href="carrito.html" class="nav-menu-link nav-link">
+						<i class="uil uil-shopping-cart-alt"></i> Carrito
+					</a>
+				</li>
+				<li class="nav-menu-item">
 					<a href="contacto.html" class="nav-menu-link nav-link">Contacto</a>
 				</li>
-				<li>
 				<li class="nav-menu-item">
 					<a href="ingresar.html" class="nav-menu-link nav-link">Ingresar</a>
 				</li>
 			</ul>
 		</nav>
 	</header>
-		<section class="grid">
+	
+	<!-- Header de la página de adopciones -->
+	<div class="adopciones-header">
+		<h1><i class="uil uil-heart-medical"></i> Adopta una Mascota</h1>
+		<p>Encuentra a tu compañero perfecto. Cada mascota tiene una historia única y está esperando encontrar un hogar lleno de amor y cuidado.</p>
+	</div>
+	
+	<section class="grid">
 			<div class="card">
 				<img src="./img/Index/1-1.jpg" alt="">
 				<p class="alias">Vera</p>
@@ -221,6 +234,16 @@
   </section>
 	<script src="./js/main.js"></script>
 	<script src="./js/modal.js"></script>	
+	
+	<!-- Modal para ver imagen en tamaño completo -->
+	<div class="modal-imagen" id="modalImagen">
+		<div class="modal-imagen-container">
+			<img src="" alt="" id="imagenAmpliada">
+			<button class="cerrar-modal-imagen" id="cerrarModalImagen">
+				<i class="uil uil-times"></i>
+			</button>
+		</div>
+	</div>
 </body>
 <footer class="pie-pagina">
 	<hr>

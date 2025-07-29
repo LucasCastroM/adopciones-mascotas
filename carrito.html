@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito - Mascotas</title>
+    <!--Fonts de Google-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet"> 
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <!--Favicon-->
+    <link rel="icon" type="image/jpg" href="./img/favicon.png"/>	
+    <!--CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <script defer src="./js/index.js"></script>
+    <script src="./js/carrito.js"></script>
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo nav-link"><img src="./img/logo.png" alt=""></a>
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-menu-link nav-link">Inicio</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="adoptar.html" class="nav-menu-link nav-link">Adopciones</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="producto.html" class="nav-menu-link nav-link">Productos</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="carrito.html" class="nav-menu-link nav-link">
+                        <i class="uil uil-shopping-cart-alt"></i> Carrito
+                    </a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacto.html" class="nav-menu-link nav-link">Contacto</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="ingresar.html" class="nav-menu-link nav-link">Ingresar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Contenido principal del carrito -->
+    <main class="carrito-container">
+        <div class="carrito-header">
+            <h1><i class="uil uil-shopping-cart-alt"></i> Mi Carrito</h1>
+            <p class="carrito-subtitle">Revisa tus productos antes de comprar</p>
+        </div>
+        
+        <!-- Lista de productos en el carrito -->
+        <div class="carrito-content">
+            <div class="productos-carrito">
+                <!-- Los productos se cargarán dinámicamente aquí -->
+            </div>
+            
+            <!-- Resumen del carrito -->
+            <div class="carrito-resumen">
+                <h3>Resumen de compra</h3>
+                <div class="resumen-item">
+                    <span>Subtotal:</span>
+                    <span class="subtotal">$0</span>
+                </div>
+                <div class="resumen-item">
+                    <span>Envío:</span>
+                    <span class="envio">$0</span>
+                </div>
+                <hr>
+                <div class="resumen-item total">
+                    <span>Total:</span>
+                    <span class="total-precio">$0</span>
+                </div>
+                <button class="btn-pagar" onclick="pagarCarrito()">
+                    <i class="uil uil-credit-card"></i>
+                    Proceder al pago
+                </button>
+                <button class="btn-vaciar" onclick="vaciarCarrito()">
+                    <i class="uil uil-trash-alt"></i>
+                    Vaciar carrito
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mensaje cuando el carrito está vacío -->
+        <div class="carrito-vacio" style="display: none;">
+            <i class="uil uil-shopping-cart-alt"></i>
+            <h2>Tu carrito está vacío</h2>
+            <p>¡Agrega algunos productos para comenzar!</p>
+            <a href="producto.html" class="btn-continuar">Continuar comprando</a>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <hr>
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./img/Logo2.png" alt="Logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Mascotas en adopción se formó con el fin de poder rescatar, rehabilitar y
+                    luego dar en adopción aquellos perros, gatos abandonados o maltratados.</p>
+                <p>Reconocemos a las mascotas como un miembro más de la familia,a las que debemos cuidar, proteger, y
+                    brindar el mejor cuidado para que tengan una excelente calidad de vida. </p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="redsocial">
+                    <a href="https://www.facebook.com/" target="_blank"><img class="zoom" src="./img/facebook.png"
+                            alt="Facebook"></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://www.instagram.com/" target="_blank" alt="Instagram"><img class="zoom"
+                            src="./img/instagram.png"></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=0543874564252" target="_blank"><img class="zoom"
+                            src="./img/whatsapp.png" alt="Envíar WhatsApp"></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; <b>Colitas</b> - Todos los derechos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>

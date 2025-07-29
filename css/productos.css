@@ -184,6 +184,95 @@ section.grid .boton.secundario:hover {
     }
 }
 
+/* Modal para ver imagen en tamaño completo */
+.modal-imagen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10000 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+}
+
+.modal-imagen.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.modal-imagen-container {
+    position: relative !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.modal-imagen-container img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+.cerrar-modal-imagen {
+    position: absolute !important;
+    top: -50px !important;
+    right: 0 !important;
+    background: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    color: #333 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cerrar-modal-imagen:hover {
+    background: #f8f9fa !important;
+    transform: scale(1.1) !important;
+}
+
+/* Hacer las imágenes clickeables */
+section.grid .producto-imagen img {
+    cursor: pointer !important;
+    transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+section.grid .producto-imagen img:hover {
+    filter: brightness(1.1) !important;
+}
+
+/* Responsive para modal de imagen */
+@media (max-width: 768px) {
+    .modal-imagen {
+        padding: 1rem !important;
+    }
+    
+    .cerrar-modal-imagen {
+        top: -40px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1rem !important;
+    }
+}
+
 /* Animación de carga */
 @keyframes fadeInUp {
     from {

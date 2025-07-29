@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/productos.css">
 	<script defer src="./js/index.js"></script>
 	<script src="./js/carrito.js"></script>
+	<script src="./js/imagen-modal.js"></script>
 	<script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -36,9 +37,13 @@
 					<a href="producto.html" class="nav-menu-link nav-link">Productos</a>
 				</li>
 				<li class="nav-menu-item">
+					<a href="carrito.html" class="nav-menu-link nav-link">
+						<i class="uil uil-shopping-cart-alt"></i> Carrito
+					</a>
+				</li>
+				<li class="nav-menu-item">
 					<a href="contacto.html" class="nav-menu-link nav-link">Contacto</a>
 				</li>
-				<li>
 				<li class="nav-menu-item">
 					<a href="ingresar.html" class="nav-menu-link nav-link">Ingresar</a>
 				</li>
@@ -50,6 +55,16 @@
 	<section class="grid">
 		<!-- El JavaScript generará las cartas de productos aquí -->
 	</section>
+	
+	<!-- Modal para ver imagen en tamaño completo -->
+	<div class="modal-imagen" id="modalImagen">
+		<div class="modal-imagen-container">
+			<img src="" alt="" id="imagenAmpliada">
+			<button class="cerrar-modal-imagen" id="cerrarModalImagen">
+				<i class="uil uil-times"></i>
+			</button>
+		</div>
+	</div>
 	
 	</div>
 

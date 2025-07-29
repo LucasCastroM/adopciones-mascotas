@@ -1,0 +1,472 @@
+/* Header de la página de adopciones */
+.adopciones-header {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.adopciones-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.adopciones-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid de mascotas */
+section.grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    padding: 2rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    margin-top: 80px !important;
+}
+
+/* Tarjetas de mascotas */
+section.grid .card {
+    background: white !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    position: relative !important;
+}
+
+section.grid .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Imagen de la mascota */
+section.grid .card img {
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+section.grid .card:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Nombre de la mascota */
+section.grid .card .alias {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    text-align: center !important;
+    margin: 1.5rem 0 1rem !important;
+    padding: 0 1rem !important;
+}
+
+/* Botones */
+section.grid .card .botones {
+    padding: 1.5rem !important;
+    display: flex !important;
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+}
+
+section.grid .card .boton {
+    flex: 1 !important;
+    padding: 1rem 1.5rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    min-width: 120px !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+section.grid .card .boton.primario {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+}
+
+section.grid .card .boton.primario:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+section.grid .card .boton.secundario {
+    background: white !important;
+    color: #667eea !important;
+    border: 2px solid #667eea !important;
+}
+
+section.grid .card .boton.secundario:hover {
+    background: #667eea !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+
+section.grid .card .boton.secundario a {
+    color: inherit !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    height: 100% !important;
+    justify-content: center !important;
+}
+
+/* Badge de estado */
+section.grid .card::before {
+    content: "Disponible" !important;
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    background: #28a745 !important;
+    color: white !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+/* Modales mejorados */
+.modalv, .modal_d, .modalcleo, .modalmym, .modals, .modalk, .modal-adopcion {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 9999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.modalv.modal--show, .modal_d.modal--show, .modalcleo.modal--show, 
+.modalmym.modal--show, .modals.modal--show, .modalk.modal--show, 
+.modal-adopcion.modal--show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.modal__container {
+    background: white !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    max-width: 500px !important;
+    width: 100% !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    position: relative !important;
+    transform: scale(0.7) !important;
+    transition: transform 0.3s ease !important;
+    margin: auto !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+.modalv.modal--show .modal__container, .modal_d.modal--show .modal__container, 
+.modalcleo.modal--show .modal__container, .modalmym.modal--show .modal__container, 
+.modals.modal--show .modal__container, .modalk.modal--show .modal__container,
+.modal-adopcion.modal--show .modal__container {
+    transform: scale(1) !important;
+}
+
+.modal__img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.modal__title {
+    font-size: 1.8rem !important;
+    color: #333 !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+}
+
+.modal__paragraph {
+    color: #666 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.modal__paragraph li {
+    margin: 0.5rem 0 !important;
+    color: #333 !important;
+    font-weight: 500 !important;
+}
+
+.modal__close_v, .modal__close_d, .modal__close_c, .modal__close_mym, 
+.modal__close_s, .modal__close_k {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.modal__close_v:hover, .modal__close_d:hover, .modal__close_c:hover, 
+.modal__close_mym:hover, .modal__close_s:hover, .modal__close_k:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Formulario de adopción */
+.formulario {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+}
+
+.campo {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+.campo label {
+    font-weight: 600 !important;
+    color: #333 !important;
+    font-size: 0.9rem !important;
+}
+
+.input-text {
+    padding: 1rem !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 10px !important;
+    font-size: 1rem !important;
+    transition: border-color 0.3s ease !important;
+    background: #f8f9fa !important;
+}
+
+.input-text:focus {
+    outline: none !important;
+    border-color: #667eea !important;
+    background: white !important;
+}
+
+.input-text[readonly] {
+    background: #e9ecef !important;
+    color: #6c757d !important;
+}
+
+textarea.input-text {
+    resize: vertical !important;
+    min-height: 100px !important;
+}
+
+.boton-envio {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-size: 1rem !important;
+}
+
+.boton-envio:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .adopciones-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .adopciones-header p {
+        font-size: 1rem !important;
+    }
+    
+    section.grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+        gap: 1.5rem !important;
+        padding: 1rem !important;
+    }
+    
+    section.grid .card img {
+        height: 220px !important;
+    }
+    
+    section.grid .card .botones {
+        flex-direction: column !important;
+    }
+    
+    .modal__container {
+        padding: 1.5rem !important;
+        margin: 1rem !important;
+    }
+    
+    .modal__img {
+        height: 200px !important;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section.grid .card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+section.grid .card:nth-child(1) { animation-delay: 0.1s; }
+section.grid .card:nth-child(2) { animation-delay: 0.2s; }
+section.grid .card:nth-child(3) { animation-delay: 0.3s; }
+section.grid .card:nth-child(4) { animation-delay: 0.4s; }
+section.grid .card:nth-child(5) { animation-delay: 0.5s; }
+section.grid .card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Asegurar que la navegación no interfiera con modales */
+.header {
+    z-index: 100 !important;
+}
+
+/* Responsive para modales */
+@media (max-width: 768px) {
+    .modalv, .modal_d, .modalcleo, .modalmym, .modals, .modalk, .modal-adopcion {
+        padding: 0.5rem !important;
+    }
+    
+    .modal__container {
+        padding: 1.5rem !important;
+        max-height: 95vh !important;
+        margin: 0.5rem !important;
+    }
+    
+    .modal__img {
+        height: 200px !important;
+    }
+}
+
+/* Modal para ver imagen en tamaño completo */
+.modal-imagen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 10000 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+    padding: 2rem !important;
+    box-sizing: border-box !important;
+}
+
+.modal-imagen.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.modal-imagen-container {
+    position: relative !important;
+    max-width: 90vw !important;
+    max-height: 90vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.modal-imagen-container img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+.cerrar-modal-imagen {
+    position: absolute !important;
+    top: -50px !important;
+    right: 0 !important;
+    background: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    color: #333 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cerrar-modal-imagen:hover {
+    background: #f8f9fa !important;
+    transform: scale(1.1) !important;
+}
+
+/* Hacer las imágenes clickeables */
+section.grid .card img {
+    cursor: pointer !important;
+    transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+section.grid .card img:hover {
+    filter: brightness(1.1) !important;
+}
+
+/* Responsive para modal de imagen */
+@media (max-width: 768px) {
+    .modal-imagen {
+        padding: 1rem !important;
+    }
+    
+    .cerrar-modal-imagen {
+        top: -40px !important;
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1rem !important;
+    }
+}
