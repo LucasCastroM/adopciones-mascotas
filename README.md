@@ -155,53 +155,9 @@ La aplicación está optimizada para:
 - 📱 Tablets (768px+)
 - 💻 Desktop (1024px+)
 
-## 🔒 Características de Seguridad
-
-- Validación de datos en frontend y backend
-- Control de CORS configurado
-- Sanitización de inputs
-- Manejo seguro de archivos estáticos
-
-## 🚀 Despliegue
-
-### Desarrollo Local
-```bash
-python app.py
-```
-
-### Producción (Recomendado)
-- **Heroku** - Plataforma como servicio
-- **Vercel** - Despliegue frontend
-- **AWS** - Infraestructura escalable
-- **DigitalOcean** - VPS económico
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para detalles.
-
-## 👨‍💻 Autor
-
-**Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-
-## 🙏 Agradecimientos
-
-- Imágenes de mascotas proporcionadas por [fuente]
-- Iconos de [Unicons](https://unicons.iconscout.com/)
-- Inspiración de diseño de [referencias]
-
 ## 📞 Contacto
 
-- Email: tu-email@ejemplo.com
+- Email: lucascastromontano@gmail.com
 - Proyecto: [https://github.com/tu-usuario/adopciones-mascotas](https://github.com/tu-usuario/adopciones-mascotas)
 
 ---
