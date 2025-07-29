@@ -15,7 +15,7 @@ productos = [
         "id": 1,
         "nombre": "Collar para perro",
         "precio": 100,
-        "descripcion": "Collar de cuero con enganche",
+        "descripcion": "Collar de cuero resistente con hebilla de seguridad",
         "imagen": "img/collar1.jpg",
         "stock": 10
     },
@@ -23,7 +23,7 @@ productos = [
         "id": 2,
         "nombre": "Collar GPS",
         "precio": 200,
-        "descripcion": "Collar GPS con batería de litio",
+        "descripcion": "Collar GPS con batería de litio y rastreo en tiempo real",
         "imagen": "img/collar3.png",
         "stock": 5
     },
@@ -31,7 +31,7 @@ productos = [
         "id": 3,
         "nombre": "Juguete dispensador",
         "precio": 300,
-        "descripcion": "Juguete dispensador de comida",
+        "descripcion": "Juguete dispensador de comida para estimular la mente",
         "imagen": "img/juguete1.jpg",
         "stock": 8
     },
@@ -39,31 +39,31 @@ productos = [
         "id": 4,
         "nombre": "Juguete interactivo",
         "precio": 150,
-        "descripcion": "Juguete para estimular la mente",
+        "descripcion": "Juguete interactivo para estimular la mente de tu mascota",
         "imagen": "img/juguete.jpg",
         "stock": 12
     },
     {
         "id": 5,
-        "nombre": "Comida premium",
+        "nombre": "Juguete dispensador ",
         "precio": 180,
-        "descripcion": "Comida de alta calidad para mascotas",
+        "descripcion": "Juguete interactivo para estimular la mente de tu mascota",
         "imagen": "img/comida1.jpg",
         "stock": 20
     },
     {
         "id": 6,
-        "nombre": "Comida especial",
+        "nombre": "Juguete dispensador para Gatos",
         "precio": 220,
-        "descripcion": "Comida especial para gatos",
+        "descripcion": "Para que tu gato se entretenga y obtenga premios.",
         "imagen": "img/comida2.jpg",
         "stock": 15
     },
     {
         "id": 7,
-        "nombre": "Comida para gatos",
+        "nombre": "Juguete para gatos",
         "precio": 160,
-        "descripcion": "Comida balanceada para felinos",
+        "descripcion": "...",
         "imagen": "img/comida3.jpg",
         "stock": 18
     },
@@ -71,7 +71,7 @@ productos = [
         "id": 8,
         "nombre": "Comida premium plus",
         "precio": 280,
-        "descripcion": "Comida premium con vitaminas",
+        "descripcion": "Comida premium plus con vitaminas y omega 3",
         "imagen": "img/comida4.jpg",
         "stock": 10
     },
@@ -79,7 +79,7 @@ productos = [
         "id": 9,
         "nombre": "Suéter con capucha",
         "precio": 250,
-        "descripcion": "Suéter con capucha para mascotas",
+        "descripcion": "Suéter con capucha abrigado para mascotas pequeñas",
         "imagen": "img/ropa1.jpeg",
         "stock": 8
     },
@@ -87,7 +87,7 @@ productos = [
         "id": 10,
         "nombre": "Ropa deportiva",
         "precio": 180,
-        "descripcion": "Ropa cómoda para actividades",
+        "descripcion": "Ropa deportiva cómoda para actividades al aire libre",
         "imagen": "img/ropa2.jpg",
         "stock": 6
     },
@@ -95,7 +95,7 @@ productos = [
         "id": 11,
         "nombre": "Ropa elegante",
         "precio": 320,
-        "descripcion": "Ropa elegante para ocasiones especiales",
+        "descripcion": "Ropa elegante para ocasiones especiales y eventos",
         "imagen": "img/ropa3.jpg",
         "stock": 4
     }
@@ -104,7 +104,7 @@ carrito = []
 
 @app.route('/')
 def home():
-    return "Hello, World!"
+    return "Proyecto de mascotas"
 
 @app.route('/productos')
 def get_productos():
